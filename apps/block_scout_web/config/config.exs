@@ -19,12 +19,12 @@ config :block_scout_web, BlockScoutWeb.Chain,
   network: System.get_env("NETWORK"),
   subnetwork: System.get_env("SUBNETWORK"),
   network_icon: System.get_env("NETWORK_ICON"),
-  logo: System.get_env("LOGO"),
+  logo: System.get_env("LOGO") || "/images/ethercore_logo.svg",
   logo_footer: System.get_env("LOGO_FOOTER"),
   has_emission_funds: false
 
 config :block_scout_web,
-  link_to_other_explorers: System.get_env("LINK_TO_OTHER_EXPLORERS") == "true",
+  link_to_other_explorers: System.get_env("LINK_TO_OTHER_EXPLORERS") == "false",
   other_explorers: %{
     "Etherscan" => "https://etherscan.io/",
     "EtherChain" => "https://www.etherchain.org/",
@@ -57,10 +57,10 @@ config :block_scout_web, BlockScoutWeb.Tracer,
 config :block_scout_web, BlockScoutWeb.Gettext, locales: ~w(en), default_locale: "en"
 
 config :block_scout_web, BlockScoutWeb.SocialMedia,
-  twitter: "PoaNetwork",
-  telegram: "poa_network",
-  facebook: "PoaNetwork",
-  instagram: "PoaNetwork"
+  twitter: "ethercore",
+  telegram: "ethercore",
+  facebook: "EtherCore-106496104204226",
+  instagram: "ethercoreorg"
 
 config :ex_cldr,
   default_locale: "en",
