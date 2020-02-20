@@ -7,13 +7,8 @@ defmodule BlockScoutWeb.LayoutView do
   @issue_url "https://github.com/poanetwork/blockscout/issues/new"
   @default_other_networks [
     %{
-      title: "EtherCore Mainnet",
-      url: "https://explorer.ethercore.org"
-    },
-    %{
-      title: "EtherCore Testnet",
-      url: "https://testnet-explorer.ethercore.org",
-      test_net?: true
+      title: "Ellaism Block Explorer 1",
+      url: "https://explorer.ellaism.io"
     }
   ]
 
@@ -33,11 +28,11 @@ defmodule BlockScoutWeb.LayoutView do
   end
 
   def subnetwork_title do
-    Keyword.get(application_config(), :subnetwork) || "EtherCore"
+    Keyword.get(application_config(), :subnetwork) || "Ellaism"
   end
 
   def network_title do
-    Keyword.get(application_config(), :network) || "ERE"
+    Keyword.get(application_config(), :network) || "ELLA"
   end
 
   defp application_config do
