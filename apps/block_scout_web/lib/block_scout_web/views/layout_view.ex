@@ -7,12 +7,16 @@ defmodule BlockScoutWeb.LayoutView do
   @issue_url "https://github.com/poanetwork/blockscout/issues/new"
   @default_other_networks [
     %{
-      title: "EtherCore Mainnet",
-      url: "https://explorer.ethercore.org"
+      title: "EtherCore Mainchain",
+      url: "https://explorer.ethercore.io"
+    },
+    %{
+      title: "EtherCore Sidechain",
+      url: "https://sidechain-explorer.ethercore.io"
     },
     %{
       title: "EtherCore Testnet",
-      url: "https://testnet-explorer.ethercore.org",
+      url: "https://testnet-explorer.ethercore.io",
       test_net?: true
     }
   ]
