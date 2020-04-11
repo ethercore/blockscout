@@ -37,7 +37,7 @@ defmodule BlockScoutWeb.LayoutView do
   end
 
   def subnetwork_title do
-    Keyword.get(application_config(), :subnetwork) || "EtherCore"
+    Keyword.get(application_config(), :subnetwork) || "EtherCore Mainchain"
   end
 
   def network_title do

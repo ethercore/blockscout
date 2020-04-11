@@ -286,7 +286,7 @@ defmodule Explorer.Chain.SmartContract do
 
     blockscout_index =
       Enum.find_index(contract_lines, fn line ->
-        String.contains?(line, "Submitted for verification at explorer.ethercore.org")
+        String.contains?(line, "Submitted for verification at explorer.ethercore.io")
       end)
 
     cond do
@@ -297,11 +297,11 @@ defmodule Explorer.Chain.SmartContract do
         List.replace_at(
           contract_lines,
           etherscan_index,
-          "* Submitted for verification at explorer.ethercore.org on #{inserted_at}"
+          "* Submitted for verification at explorer.ethercore.io on #{inserted_at}"
         )
 
       !etherscan_index && !blockscout_index ->
-        header = ["/**", "* Submitted for verification at explorer.ethercore.org on #{inserted_at}", "*/"]
+        header = ["/**", "* Submitted for verification at explorer.ethercore.io on #{inserted_at}", "*/"]
 
         header ++ contract_lines
 
